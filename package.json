@@ -13,10 +13,16 @@
     "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint \"**/*.css\"",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
+    "format":
+      "prettier --print-width=110 --single-quote --trailingc-comma all --write \"{src, __tests__}/**/*.js\"",
     "lint-staged": "lint-staged",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "lint-staged": {
+    "*.js": ["yarn run format", "git add"]
+  },
+  "pre-commit": "lint-staged",
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
