@@ -14,7 +14,7 @@
     "lint:stylelint": "stylelint \"**/*.css\"",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
     "format":
-      "prettier --print-width=110 --single-quote --trailingc-comma all --write \"{src, __tests__}/**/*.js\"",
+      "prettier --print-width=100 --single-quote --trailing-comma all --write \"{src, __tests__}/**/*.js\"",
     "lint-staged": "lint-staged",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
